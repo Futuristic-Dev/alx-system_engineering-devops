@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# Script that listens (-l) to port 98 on localhost via netcat
 
 nc -l localhost 98
