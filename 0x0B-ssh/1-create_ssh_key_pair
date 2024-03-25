@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Script to create an ssh-key pair
+
+ssh-keygen -t rsa -b 4069 -C "an_email@example.com"
