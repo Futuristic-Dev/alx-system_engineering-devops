@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# A script with the minimum number of commands to automate a fix.
+# Nginx must be running, and listening on port 80 of all the server’s\n 
+# activeIPv4 IPs.
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+
+echo "server { listen 80; }" | sudo tee /etc/nginx/sites-available/default > /dev/null
+
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enables/default
+
+sudo service nginx restart
