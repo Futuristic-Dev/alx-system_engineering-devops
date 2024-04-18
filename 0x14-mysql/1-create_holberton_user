@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+msyql -u root -p
+
+CREATE USER 'holberton_user'@''localhost' IDENTIFIED BY 'projectcorrection280hbtn';
+GRANT REPLICATION CLIENT ON *.* TO 'holberton_user'@'localhost';
+FLUSH PRIVILEGES;
+
+SHOW DATABASES;
+SELECT User, Host FROM mysql.user;
+
+SHOW GRANTS FOR 'holberton_user'@'localhost';
