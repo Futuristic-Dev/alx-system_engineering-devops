@@ -4,7 +4,7 @@
 sudo apt update
 
 # Install MySQL server version 
-sudo apt install mysql-server
+sudo apt install mysql-server-5.7
 
 # Start MySQL service
 sudo service mysql start
