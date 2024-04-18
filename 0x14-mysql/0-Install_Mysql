@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Update package lists
+sudo apt update
+
+# Install MySQL server version 
+sudo apt install mysql-server
+
+# Start MySQL service
+sudo service mysql start
+
+# Check MySQL service status
+sudo service mysql status
