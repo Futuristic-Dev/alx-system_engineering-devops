@@ -13,7 +13,7 @@ frontend Futuredev-fend
 backend Futuredev-bend
 	balance roundrobin
 	server 526350-web-01 35.153.98.43 check
-	server 526350-web-02 54.198.39.233 check
+	server 526350-web-02 54.236.17.184 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
