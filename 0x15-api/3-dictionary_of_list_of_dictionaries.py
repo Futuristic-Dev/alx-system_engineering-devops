@@ -8,7 +8,6 @@ import requests
 import sys
 
 
-
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/users"
 
@@ -32,4 +31,3 @@ if __name__ == "__main__":
             })
     with open('todo_all_employees.json', 'w') as file:
         json.dump(dictionary, file)
-
