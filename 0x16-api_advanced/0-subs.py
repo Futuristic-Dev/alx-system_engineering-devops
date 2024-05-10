@@ -3,7 +3,7 @@
 """
 Write a function that queries the reddit API.
 
-Returns the number of subscribers (not active users, total subscribers)\n
+Returns the number of subscribers (not active users, total subscribers).
 For a given subreddit.
 If an invalid subreddit is given, the function should return 0.
 """
@@ -14,12 +14,12 @@ from requests import get
 
 def number_of_subscribers(subreddit):
     """
-    Queries the Reddit API and returns the number of subscribers
+    Query the Reddit API and returns the number of subscribers.
+
     for a given subreddit.
     """
     if subreddit is None or not isinstance(subreddit, str):
         return 0
-    
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     headers = {
         'User-Agent': 'Google Chrome Version 81.0.4044.129'
@@ -32,6 +32,6 @@ def number_of_subscribers(subreddit):
 
     try:
         return result.get('data').get('subscribers')
-    
+
     except Exception:
         return 0
